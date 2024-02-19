@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="added jenkinsfile">
-      <change beforePath="$PROJECT_DIR$/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +173,7 @@
       <workItem from="1707471156770" duration="12000" />
       <workItem from="1707471173353" duration="210000" />
       <workItem from="1707835632987" duration="637000" />
-      <workItem from="1708348038050" duration="8269000" />
+      <workItem from="1708348038050" duration="8599000" />
     </task>
     <task id="LOCAL−00001" summary="done">
       <option name="closed" value="true" />
@@ -273,7 +273,14 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1708366321588</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL−00015" summary="added jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1708366439767</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1708366439767</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
