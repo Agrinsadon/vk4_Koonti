@@ -1,33 +1,43 @@
 pipeline {
     agent any
 
-        environment {
-            MAVEN_HOME = tool 'Maven'
-        }
+    tools {
+        maven 'Maven'
+        jdk 'JDK'
+    }
 
     stages {
-        stage('Checkout Code') {
+        stage('Compile') {
             steps {
-                git branch: 'master', credentialsId: 'github-credentials', url: 'https://github.com/Agrinsadon/vk4_Koonti.git'
+                echo 'Compiling...'
+                sh 'mvn compile'
             }
         }
-
-        stage('Build and Test') {
+        stage('Test') {
             steps {
-                sh 'mvn clean compile test site' // Combine commands for efficiency
+                echo 'Testing...'
+                sh 'mvn test'
             }
         }
-
-        stage('Publish Artifacts') {
+        stage('Site') {
             steps {
-                archiveArtifacts artifacts: '**/*.war' // Adjust artifact pattern if needed
+                echo 'Generating site...'
+                sh 'mvn site'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                sh 'mvn clean install'
             }
         }
     }
-
     post {
+        always {
+            echo 'This will always run'
+        }
         success {
-            echo 'Build successful!'
+            echo 'Build succeeded!'
         }
         failure {
             echo 'Build failed!'
