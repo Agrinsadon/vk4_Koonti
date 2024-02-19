@@ -7,19 +7,17 @@ pipeline {
     }
 
     options {
-        // Set up GitHub webhook to trigger the pipeline on push events
         buildDiscarder(logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10'))
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Checkout the source code from GitHub
                 echo 'Checking out code...'
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Agrinsadon/vk4_Koonti']]])
             }
         }
-        stage('Build, Test, and Site') {
+        stage('Build, Clean, Compile, Test, and Site') {
             steps {
                 echo 'Cleaning...'
                 sh 'mvn clean'
