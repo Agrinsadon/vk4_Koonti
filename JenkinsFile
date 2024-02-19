@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'master', credentialsId: 'github-credentials', url: 'https://github.com/Agrinsadon/vk4_Koonti.git'
+            }
+        }
+
+        stage('Build and Test') {
+            steps {
+                sh 'mvn clean compile test site' // Combine commands for efficiency
+            }
+        }
+
+        stage('Publish Artifacts') {
+            steps {
+                archiveArtifacts artifacts: '**/*.war' // Adjust artifact pattern if needed
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build successful!'
+        }
+        failure {
+            echo 'Build failed!'
+        }
+    }
+}

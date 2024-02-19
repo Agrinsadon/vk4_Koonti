@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="jacoco added">
+    <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="added more testing">
+      <change afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +41,7 @@
     "Application.Converter.executor": "Run",
     "Application.Main.executor": "Run",
     "JUnit.All in CelsiusConverter (1).executor": "Run",
+    "JUnit.All in CelsiusConverter (2).executor": "Run",
     "JUnit.All in CelsiusConverter.executor": "Run",
     "JUnit.All in vk4_Koonti (1).executor": "Coverage",
     "JUnit.All in vk4_Koonti (2).executor": "Coverage",
@@ -174,7 +174,7 @@
       <workItem from="1707471156770" duration="12000" />
       <workItem from="1707471173353" duration="210000" />
       <workItem from="1707835632987" duration="637000" />
-      <workItem from="1708348038050" duration="4465000" />
+      <workItem from="1708348038050" duration="5183000" />
     </task>
     <task id="LOCAL−00001" summary="done">
       <option name="closed" value="true" />
@@ -197,7 +197,14 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1708354473324</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="added more testing">
+      <option name="closed" value="true" />
+      <created>1708357487901</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1708357487901</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +213,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="done" />
     <MESSAGE value="jacoco added" />
-    <option name="LAST_COMMIT_MESSAGE" value="jacoco added" />
+    <MESSAGE value="added more testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more testing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vk4_Koonti$java_in_vk4_Koonti.ic" NAME="java in vk4_Koonti Coverage Results" MODIFIED="1707466974621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
