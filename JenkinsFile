@@ -7,8 +7,10 @@ pipeline {
     }
 
     stages {
-        stage('Compile') {
+        stage('Build') {
             steps {
+                echo 'Cleaning...'
+                sh 'mvn clean'
                 echo 'Compiling...'
                 sh 'mvn compile'
             }
@@ -25,13 +27,8 @@ pipeline {
                 sh 'mvn site'
             }
         }
-        stage('Build') {
-            steps {
-                echo 'Building...'
-                sh 'mvn clean install'
-            }
-        }
     }
+
     post {
         always {
             echo 'This will always run'
