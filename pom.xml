@@ -14,22 +14,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <url>https://github.com/Agrinsadon/vk4_Koonti</url> <!-- Replace with your project URL -->
+    <url>https://github.com/Agrinsadon/vk4_Koonti</url>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>3.5.0</version> <!-- Specify the version -->
+                <version>3.5.0</version>
             </plugin>
 
-            <!-- Other plugins -->
-
+            <!-- Add Jacoco Maven Plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.7</version> <!-- Use the latest version -->
+                <version>0.8.7</version>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
@@ -68,7 +67,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.4.0</version> <!-- Replace with the latest version -->
+            <version>7.4.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
