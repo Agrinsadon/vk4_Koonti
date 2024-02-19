@@ -1,57 +1,39 @@
 pipeline {
     agent any
 
+    environment {
+        GITHUB_REPO = 'https://github.com/Agrinsadon/vk4_Koonti'
+    }
+
     tools {
         maven 'maven2'
         jdk 'jdk'
     }
 
-    options {
-        buildDiscarder(logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10'))
-    }
-
     stages {
         stage('Checkout') {
             steps {
-                echo 'Checking out code...'
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Agrinsadon/vk4_Koonti']]])
+                git branch: 'master', url: "https://github.com/Agrinsadon/vk4_Koonti"
             }
         }
 
         stage('Build') {
             steps {
-                bat 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                sh 'mvn test'
             }
             post {
                 success {
-                    // Publish JUnit test results
                     junit '**/target/surefire-reports/TEST-*.xml'
 
-                    // Generate JaCoCo code coverage report
                     jacoco(execPattern: '**/target/jacoco.exec')
                 }
             }
-        }
-    }
-
-    post {
-        always {
-            echo 'This will always run'
-        }
-        success {
-            echo 'Build succeeded!'
-        }
-        failure {
-            echo 'Build failed!'
-        }
-        unstable {
-            echo 'Build unstable!'
         }
     }
 }
