@@ -171,7 +171,7 @@
       <workItem from="1707471156770" duration="12000" />
       <workItem from="1707471173353" duration="210000" />
       <workItem from="1707835632987" duration="637000" />
-      <workItem from="1708348038050" duration="6057000" />
+      <workItem from="1708348038050" duration="6396000" />
     </task>
     <task id="LOCAL−00001" summary="done">
       <option name="closed" value="true" />
@@ -229,7 +229,14 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1708360832544</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="added jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1708361170739</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1708361170739</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
