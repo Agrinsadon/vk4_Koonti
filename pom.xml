@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <url>https://example.com/project-url</url> <!-- Replace with your project URL -->
+    <url>https://github.com/Agrinsadon/vk4_Koonti</url> <!-- Replace with your project URL -->
 
     <build>
         <plugins>
@@ -68,9 +68,8 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.4.0</version>
+            <version>7.4.0</version> <!-- Replace with the latest version -->
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 </project>
