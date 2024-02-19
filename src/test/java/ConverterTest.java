@@ -23,4 +23,15 @@ public class ConverterTest {
 
         assertEquals(0.0, celsius, 0.001);
     }
+
+    @Test
+    public void testFahrenheitToCelsius() {
+        double fahrenheit = 212.0;
+
+        double celsius = Converter.fahrenheitToCelsius(fahrenheit);
+
+        assertEquals(100.0, celsius, 0.001);
+    }
 }
+
+

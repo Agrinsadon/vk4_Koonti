@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="done">
+    <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="jacoco added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +41,8 @@
   "keyToString": {
     "Application.Converter.executor": "Run",
     "Application.Main.executor": "Run",
+    "JUnit.All in CelsiusConverter (1).executor": "Run",
+    "JUnit.All in CelsiusConverter.executor": "Run",
     "JUnit.All in vk4_Koonti (1).executor": "Coverage",
     "JUnit.All in vk4_Koonti (2).executor": "Coverage",
     "JUnit.All in vk4_Koonti (3).executor": "Run",
@@ -47,6 +50,7 @@
     "JUnit.ConverterTest.executor": "Coverage",
     "JUnit.ConverterTest.testFahrenheitToCelsius.executor": "Coverage",
     "JUnit.ConverterTest.testFahrenheitToCelsiusConversion.executor": "Run",
+    "JUnit.ConverterTest.testToKelvin.executor": "Debug",
     "JUnit.java in vk4_Koonti.executor": "Coverage",
     "Maven.vk4_Koonti [clean].executor": "Run",
     "Maven.vk4_Koonti [compile].executor": "Run",
@@ -86,8 +90,8 @@
       <command value="mvn site" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in vk4_Koonti (1)">
-    <configuration name="All in vk4_Koonti (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in CelsiusConverter (2)">
+    <configuration name="All in CelsiusConverter (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CelsiusConverter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -95,7 +99,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in vk4_Koonti (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in CelsiusConverter (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CelsiusConverter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in CelsiusConverter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CelsiusConverter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in vk4_Koonti (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CelsiusConverter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -107,24 +127,6 @@
       <module name="CelsiusConverter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in vk4_Koonti" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CelsiusConverter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConverterTest.testFahrenheitToCelsiusConversion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CelsiusConverter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ConverterTest" />
-      <option name="METHOD_NAME" value="testFahrenheitToCelsiusConversion" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in CelsiusConverter (2)" />
+        <item itemvalue="JUnit.All in CelsiusConverter (1)" />
+        <item itemvalue="JUnit.All in CelsiusConverter" />
         <item itemvalue="JUnit.All in vk4_Koonti (1)" />
         <item itemvalue="JUnit.All in vk4_Koonti (3)" />
-        <item itemvalue="JUnit.All in vk4_Koonti" />
-        <item itemvalue="JUnit.ConverterTest.testFahrenheitToCelsiusConversion" />
-        <item itemvalue="JUnit.All in vk4_Koonti (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +174,7 @@
       <workItem from="1707471156770" duration="12000" />
       <workItem from="1707471173353" duration="210000" />
       <workItem from="1707835632987" duration="637000" />
-      <workItem from="1708348038050" duration="3216000" />
+      <workItem from="1708348038050" duration="4465000" />
     </task>
     <task id="LOCAL−00001" summary="done">
       <option name="closed" value="true" />
@@ -188,7 +190,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1708350086040</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="jacoco added">
+      <option name="closed" value="true" />
+      <created>1708354473324</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1708354473324</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +205,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="done" />
-    <option name="LAST_COMMIT_MESSAGE" value="done" />
+    <MESSAGE value="jacoco added" />
+    <option name="LAST_COMMIT_MESSAGE" value="jacoco added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vk4_Koonti$java_in_vk4_Koonti.ic" NAME="java in vk4_Koonti Coverage Results" MODIFIED="1707466974621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
