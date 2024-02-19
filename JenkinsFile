@@ -17,14 +17,28 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Agrinsadon/vk4_Koonti']]])
             }
         }
-        stage('Build, Clean, Compile, Test, and Site') {
+        stage('Build') {
             steps {
                 echo 'Cleaning...'
                 sh 'mvn clean'
                 echo 'Compiling...'
                 sh 'mvn compile'
-                echo 'Testing...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
                 sh 'mvn test'
+            }
+        }
+        stage('Coverage Report') {
+            steps {
+                echo 'Generating coverage report...'
+                sh 'mvn jacoco:report'
+            }
+        }
+        stage('Site') {
+            steps {
                 echo 'Generating site...'
                 sh 'mvn site'
             }
@@ -40,6 +54,9 @@ pipeline {
         }
         failure {
             echo 'Build failed!'
+        }
+        unstable {
+            echo 'Build unstable!'
         }
     }
 }
