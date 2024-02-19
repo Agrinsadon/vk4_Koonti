@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="added jenkinsfile" />
+    <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="added jenkinsfile">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,7 +174,7 @@
       <workItem from="1707471156770" duration="12000" />
       <workItem from="1707471173353" duration="210000" />
       <workItem from="1707835632987" duration="637000" />
-      <workItem from="1708348038050" duration="6396000" />
+      <workItem from="1708348038050" duration="6993000" />
     </task>
     <task id="LOCAL−00001" summary="done">
       <option name="closed" value="true" />
@@ -236,7 +239,14 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1708361170739</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="added jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1708361324198</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1708361324198</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

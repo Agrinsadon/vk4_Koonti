@@ -6,27 +6,27 @@ pipeline {
         jdk 'jdk'
     }
 
+    options {
+        // Set up GitHub webhook to trigger the pipeline on push events
+        buildDiscarder(logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10'))
+    }
+
     stages {
-        stage('Clean') {
+        stage('Checkout') {
+            steps {
+                // Checkout the source code from GitHub
+                echo 'Checking out code...'
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Agrinsadon/vk4_Koonti']]])
+            }
+        }
+        stage('Build, Test, and Site') {
             steps {
                 echo 'Cleaning...'
                 sh 'mvn clean'
-            }
-        }
-        stage('Compile') {
-            steps {
                 echo 'Compiling...'
                 sh 'mvn compile'
-            }
-        }
-        stage('Test') {
-            steps {
                 echo 'Testing...'
                 sh 'mvn test'
-            }
-        }
-        stage('Site') {
-            steps {
                 echo 'Generating site...'
                 sh 'mvn site'
             }
