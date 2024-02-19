@@ -1,14 +1,26 @@
+import org.example.Converter;
+import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
-import org.testng.annotations.Test;
-
-public class TemperatureConverterTest {
+public class ConverterTest {
 
     @Test
-    public void testFahrenheitToCelsius() {
+    public void testToCelsius() {
         double fahrenheit = 32.0;
-        double expectedCelsius = 0.0;
 
-        assertEquals(expectedCelsius, TemperatureConverter.fahrenheitToCelsius(fahrenheit), 0.001);
+        Converter converter = new Converter(fahrenheit);
+        double celsius = converter.toCelsius();
+
+        assertEquals(0.0, celsius, 0.001);
+    }
+
+    @Test
+    public void testKelvinToCelsius() {
+        float kelvin = 273.15F;
+
+        float celsius = Converter.kelvinToCelsius(kelvin);
+
+        assertEquals(0.0, celsius, 0.001);
     }
 }

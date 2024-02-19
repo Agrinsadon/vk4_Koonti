@@ -1,11 +1,18 @@
 package org.example;
 
-public class Main {
+public class Converter {
 
-    public static void main(String[] args) {
-        double fahrenheit = 212.0;
-        double celsius = TemperatureConverter.fahrenheitToCelsius(fahrenheit);
+    private double fahrenheit;
 
-        System.out.println(fahrenheit + " Fahrenheit is equal to " + celsius + " Celsius");
+    public Converter(double fahrenheit) {
+        this.fahrenheit = fahrenheit;
+    }
+
+    public double toCelsius() {
+        return (fahrenheit - 32) * 5 / 9;
+    }
+
+    public static float kelvinToCelsius(float kelvin) {
+        return (float) (kelvin - 273.15);
     }
 }
