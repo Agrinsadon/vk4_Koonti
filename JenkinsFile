@@ -17,30 +17,25 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Agrinsadon/vk4_Koonti']]])
             }
         }
+
         stage('Build') {
             steps {
-                echo 'Cleaning...'
-                sh 'mvn clean'
-                echo 'Compiling...'
-                sh 'mvn compile'
+                bat 'mvn clean install'
             }
         }
+
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                sh 'mvn test'
+                bat 'mvn test'
             }
-        }
-        stage('Coverage Report') {
-            steps {
-                echo 'Generating coverage report...'
-                sh 'mvn jacoco:report'
-            }
-        }
-        stage('Site') {
-            steps {
-                echo 'Generating site...'
-                sh 'mvn site'
+            post {
+                success {
+                    // Publish JUnit test results
+                    junit '**/target/surefire-reports/TEST-*.xml'
+
+                    // Generate JaCoCo code coverage report
+                    jacoco(execPattern: '**/target/jacoco.exec')
+                }
             }
         }
     }
