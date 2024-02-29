@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="added jenkinsfile">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +29,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -41,14 +47,19 @@
     "Application.Main.executor": "Run",
     "JUnit.All in CelsiusConverter (1).executor": "Run",
     "JUnit.All in CelsiusConverter (2).executor": "Run",
-    "JUnit.All in CelsiusConverter.executor": "Run",
+    "JUnit.All in CelsiusConverter (3).executor": "Coverage",
+    "JUnit.All in CelsiusConverter (4).executor": "Coverage",
+    "JUnit.All in CelsiusConverter (5).executor": "Coverage",
+    "JUnit.All in CelsiusConverter.executor": "Coverage",
     "JUnit.All in vk4_Koonti (1).executor": "Coverage",
     "JUnit.All in vk4_Koonti (2).executor": "Coverage",
     "JUnit.All in vk4_Koonti (3).executor": "Run",
     "JUnit.All in vk4_Koonti.executor": "Coverage",
-    "JUnit.ConverterTest.executor": "Coverage",
+    "JUnit.ConverterTest.executor": "Run",
     "JUnit.ConverterTest.testFahrenheitToCelsius.executor": "Coverage",
     "JUnit.ConverterTest.testFahrenheitToCelsiusConversion.executor": "Run",
+    "JUnit.ConverterTest.testKelvinToFahrenheit.executor": "Run",
+    "JUnit.ConverterTest.testToCelsius.executor": "Run",
     "JUnit.ConverterTest.testToKelvin.executor": "Debug",
     "JUnit.java in vk4_Koonti.executor": "Coverage",
     "Maven.vk4_Koonti [clean].executor": "Run",
@@ -89,7 +100,7 @@
       <command value="mvn site" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in CelsiusConverter (2)">
+  <component name="RunManager" selected="JUnit.All in CelsiusConverter">
     <configuration name="All in CelsiusConverter (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CelsiusConverter" />
       <option name="PACKAGE_NAME" value="" />
@@ -114,42 +125,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in vk4_Koonti (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CelsiusConverter" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="ConverterTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in vk4_Koonti (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConverterTest.testKelvinToFahrenheit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CelsiusConverter" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="CelsiusConverter" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="CelsiusConverter" />
-      <option name="filePath" />
+      <option name="MAIN_CLASS_NAME" value="ConverterTest" />
+      <option name="METHOD_NAME" value="testKelvinToFahrenheit" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in CelsiusConverter (2)" />
-        <item itemvalue="JUnit.All in CelsiusConverter (1)" />
         <item itemvalue="JUnit.All in CelsiusConverter" />
-        <item itemvalue="JUnit.All in vk4_Koonti (1)" />
-        <item itemvalue="JUnit.All in vk4_Koonti (3)" />
+        <item itemvalue="JUnit.All in CelsiusConverter (2)" />
+        <item itemvalue="JUnit.ConverterTest.testKelvinToFahrenheit" />
+        <item itemvalue="JUnit.All in CelsiusConverter (1)" />
+        <item itemvalue="JUnit.ConverterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +174,11 @@
       <workItem from="1707471156770" duration="12000" />
       <workItem from="1707471173353" duration="210000" />
       <workItem from="1707835632987" duration="637000" />
-      <workItem from="1708348038050" duration="8599000" />
+      <workItem from="1708348038050" duration="10207000" />
+      <workItem from="1708518225701" duration="324000" />
+      <workItem from="1708518754198" duration="1136000" />
+      <workItem from="1708536292630" duration="1688000" />
+      <workItem from="1709220322114" duration="503000" />
     </task>
     <task id="LOCAL−00001" summary="done">
       <option name="closed" value="true" />
@@ -280,7 +285,14 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1708366439767</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL−00016" summary="added jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1708366941060</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1708366941060</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,15 +306,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="added jenkinsfile" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/vk4_Koonti$java_in_vk4_Koonti.ic" NAME="java in vk4_Koonti Coverage Results" MODIFIED="1707466974621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/vk4_Koonti$ConverterTest_testFahrenheitToCelsius.ic" NAME="ConverterTest.testFahrenheitToCelsius Coverage Results" MODIFIED="1707464138316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_CelsiusConverter__5_.ic" NAME="All in CelsiusConverter (5) Coverage Results" MODIFIED="1708519146374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_CelsiusConverter__3_.ic" NAME="All in CelsiusConverter (3) Coverage Results" MODIFIED="1708367184132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_vk4_Koonti__1_.ic" NAME="All in vk4_Koonti (1) Coverage Results" MODIFIED="1708349408451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/vk4_Koonti$java_in_vk4_Koonti.ic" NAME="java in vk4_Koonti Coverage Results" MODIFIED="1707466974621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_CelsiusConverter__4_.ic" NAME="All in CelsiusConverter (4) Coverage Results" MODIFIED="1708519070644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_vk4_Koonti__3_.ic" NAME="All in vk4_Koonti (3) Coverage Results" MODIFIED="1707468623120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/vk4_Koonti$ConverterTest.ic" NAME="ConverterTest Coverage Results" MODIFIED="1707465331385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/vk4_Koonti$Converter.ic" NAME="Converter Coverage Results" MODIFIED="1707465248453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.example.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_CelsiusConverter.ic" NAME="All in CelsiusConverter Coverage Results" MODIFIED="1708519286543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_vk4_Koonti__2_.ic" NAME="All in vk4_Koonti (2) Coverage Results" MODIFIED="1707467319679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_vk4_Koonti__1_.ic" NAME="All in vk4_Koonti (1) Coverage Results" MODIFIED="1708349408451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_vk4_Koonti.ic" NAME="All in vk4_Koonti Coverage Results" MODIFIED="1707468409681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
