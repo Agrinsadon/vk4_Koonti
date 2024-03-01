@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        IMAGE_NAME = 'agrinsadon/vk4koonti'
+        IMAGE_NAME = 'agrin22/vk4koonti'
         TAG = 'latest'
     }
     stages {
