@@ -8,15 +8,15 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker Image...'
-                sh "/opt/homebrew/bin/docker build -t ${IMAGE_NAME}:${TAG} ."
+                sh "/usr/local/bin/docker build -t ${IMAGE_NAME}:${TAG} ."
             }
         }
         stage('Push Docker Image') {
             steps {
                 echo 'Pushing Docker Image...'
                 withCredentials([usernamePassword(credentialsId: 'agrinsadonID', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
-                    sh "/opt/homebrew/bin/docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
-                    sh "/opt/homebrew/bin/docker push ${IMAGE_NAME}:${TAG}"
+                    sh "/usr/local/bin/docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
+                    sh "/usr/local/bin/docker push ${IMAGE_NAME}:${TAG}"
                 }
             }
         }
