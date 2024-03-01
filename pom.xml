@@ -17,13 +17,30 @@
     <url>https://github.com/Agrinsadon/vk4_Koonti</url>
 
     <build>
+        <finalName>interconversions</finalName>
         <plugins>
+            <!-- Maven JAR plugin configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.example.App</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Project Info Reports plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>3.5.0</version>
             </plugin>
 
+            <!-- Maven Compiler plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -34,6 +51,7 @@
                 </configuration>
             </plugin>
 
+            <!-- Jacoco Maven plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -58,6 +76,7 @@
     </build>
 
     <dependencies>
+        <!-- Dependencies remain unchanged -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>

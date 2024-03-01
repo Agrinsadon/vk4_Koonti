@@ -4,6 +4,9 @@ public class Converter {
 
     private double fahrenheit;
 
+    public Converter() {
+    }
+
     public Converter(double fahrenheit) {
         this.fahrenheit = fahrenheit;
     }

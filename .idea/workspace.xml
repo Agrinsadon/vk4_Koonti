@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="added jenkinsfile">
+    <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="Added the new code of line KelvintoFahrenheit">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +44,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "Application.Converter.executor": "Run",
     "Application.Main.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
     "JUnit.All in CelsiusConverter (1).executor": "Run",
     "JUnit.All in CelsiusConverter (2).executor": "Run",
     "JUnit.All in CelsiusConverter (3).executor": "Coverage",
@@ -64,6 +67,7 @@
     "JUnit.java in vk4_Koonti.executor": "Coverage",
     "Maven.vk4_Koonti [clean].executor": "Run",
     "Maven.vk4_Koonti [compile].executor": "Run",
+    "Maven.vk4_Koonti [dockerfile:build].executor": "Run",
     "Maven.vk4_Koonti [org.jacoco:jacoco-maven-plugin:0.8.7:report].executor": "Run",
     "Maven.vk4_Koonti [site].executor": "Run",
     "Maven.vk4_Koonti [test].executor": "Run",
@@ -94,17 +98,23 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn site" />
       <command value="mvn clean" />
       <command value="mvn compile" />
       <command value="mvn test" />
-      <command value="mvn site" />
+      <command value="mvn dockerfile:build" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in CelsiusConverter">
-    <configuration name="All in CelsiusConverter (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="CelsiusConverter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,15 +135,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CelsiusConverter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ConverterTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ConverterTest.testKelvinToFahrenheit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CelsiusConverter" />
       <option name="PACKAGE_NAME" value="" />
@@ -144,13 +145,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildOnly" value="true" />
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.All in CelsiusConverter" />
         <item itemvalue="JUnit.All in CelsiusConverter (2)" />
         <item itemvalue="JUnit.ConverterTest.testKelvinToFahrenheit" />
-        <item itemvalue="JUnit.All in CelsiusConverter (1)" />
-        <item itemvalue="JUnit.ConverterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +195,7 @@
       <workItem from="1708518225701" duration="324000" />
       <workItem from="1708518754198" duration="1136000" />
       <workItem from="1708536292630" duration="1688000" />
-      <workItem from="1709220322114" duration="503000" />
+      <workItem from="1709220322114" duration="5571000" />
     </task>
     <task id="LOCAL−00001" summary="done">
       <option name="closed" value="true" />
@@ -292,7 +309,14 @@
       <option name="presentableId" value="LOCAL−00016" />
       <updated>1708366941060</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL−00017" summary="Added the new code of line KelvintoFahrenheit">
+      <option name="closed" value="true" />
+      <created>1709220979688</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1709220979688</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +327,23 @@
     <MESSAGE value="jacoco added" />
     <MESSAGE value="added more testing" />
     <MESSAGE value="added jenkinsfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="added jenkinsfile" />
+    <MESSAGE value="Added the new code of line KelvintoFahrenheit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the new code of line KelvintoFahrenheit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Converter.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vk4_Koonti$ConverterTest_testFahrenheitToCelsius.ic" NAME="ConverterTest.testFahrenheitToCelsius Coverage Results" MODIFIED="1707464138316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -317,7 +357,7 @@
     <SUITE FILE_PATH="coverage/vk4_Koonti$Converter.ic" NAME="Converter Coverage Results" MODIFIED="1707465248453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.example.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_CelsiusConverter.ic" NAME="All in CelsiusConverter Coverage Results" MODIFIED="1708519286543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_CelsiusConverter.ic" NAME="All in CelsiusConverter Coverage Results" MODIFIED="1709220844340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_vk4_Koonti__2_.ic" NAME="All in vk4_Koonti (2) Coverage Results" MODIFIED="1707467319679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/vk4_Koonti$All_in_vk4_Koonti.ic" NAME="All in vk4_Koonti Coverage Results" MODIFIED="1707468409681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
