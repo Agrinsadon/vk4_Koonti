@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="Added the new code of line KelvintoFahrenheit &amp; Dockerfile works now">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="196c3d4b-587a-4dbf-a6d6-7ff8e1f020b1" name="Changes" comment="jenkingsfile update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,7 +188,7 @@
       <workItem from="1708518225701" duration="324000" />
       <workItem from="1708518754198" duration="1136000" />
       <workItem from="1708536292630" duration="1688000" />
-      <workItem from="1709220322114" duration="12471000" />
+      <workItem from="1709220322114" duration="12692000" />
     </task>
     <task id="LOCAL−00001" summary="done">
       <option name="closed" value="true" />
@@ -320,7 +316,21 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1709277288300</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="jenkingsfile update">
+      <option name="closed" value="true" />
+      <created>1709305173694</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1709305173694</updated>
+    </task>
+    <task id="LOCAL−00020" summary="jenkingsfile update">
+      <option name="closed" value="true" />
+      <created>1709305443816</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1709305443816</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +343,8 @@
     <MESSAGE value="added jenkinsfile" />
     <MESSAGE value="Added the new code of line KelvintoFahrenheit" />
     <MESSAGE value="Added the new code of line KelvintoFahrenheit &amp; Dockerfile works now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the new code of line KelvintoFahrenheit &amp; Dockerfile works now" />
+    <MESSAGE value="jenkingsfile update" />
+    <option name="LAST_COMMIT_MESSAGE" value="jenkingsfile update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
