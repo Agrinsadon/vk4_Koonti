@@ -3,7 +3,6 @@ pipeline {
     environment {
         IMAGE_NAME = 'agrinsadon/vk4koonti'
         TAG = 'latest'
-
     }
     stages {
         stage('Build Docker Image') {
